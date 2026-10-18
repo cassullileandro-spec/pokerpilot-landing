@@ -1,0 +1,10 @@
+{
+  "name": "pokerpilot-landing",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "node landing/server.mjs",
+    "start": "node landing/server.mjs",
+    "check": "node --check landing/dist/app.js && node --check landing/dist/theme-init.js && node --check landing/server.mjs"
+  }
+}

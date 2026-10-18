@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+
+# Local research, working notes and review screenshots.
+research/
+skills/
+landing/qa/
+landing/README.md
+
+# Superseded assets; the current gallery uses the Retina PNGs.
+landing/dist/assets/*.jpg
+landing/dist/dark-app.js
