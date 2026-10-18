@@ -2,6 +2,19 @@
 
 Landing page estática do PokerPilot, com temas Dark e Light, galeria de capturas reais em alta resolução e cards ilustrados interativos.
 
+Site ao vivo: https://cassullileandro-spec.github.io/pokerpilot-landing/
+
+## Atualizar o site publicado
+
+O GitHub Pages publica a raiz da branch `codex/pages`, que contém apenas os arquivos de `landing/dist/`. Após salvar as alterações em um commit na `main`, publique com:
+
+```sh
+npm run check
+git subtree push --prefix=landing/dist origin codex/pages
+```
+
+O GitHub Pages aplica a atualização após concluir a publicação dessa branch.
+
 ## Executar localmente
 
 Requisito: Node.js 18 ou superior. O projeto não possui dependências externas de execução nem etapa de build.
