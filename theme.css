@@ -1,0 +1,12 @@
+.theme-picker{display:flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--line);border-radius:30px;background:var(--surface-2);flex-shrink:0}
+.theme-picker button{display:flex;align-items:center;justify-content:center;gap:5px;min-height:33px;padding:7px 10px;border-radius:25px;font-size:10px;line-height:1;color:var(--muted);transition:background .2s,color .2s}
+.theme-picker svg{width:13px;height:13px;stroke-width:1.7}
+.theme-picker button[aria-pressed=true]{background:var(--surface);color:var(--text);box-shadow:0 1px 5px #00000015}
+.theme-picker button:hover{color:var(--mint)}
+html[data-theme=dark] .theme-picker{background:#2c323c;border-color:#65708066}
+html[data-theme=dark] .theme-picker button[aria-pressed=true]{background:#495651;color:#bff5d1}
+.nav-actions{gap:17px}.desktop-nav{margin-left:0;gap:24px}
+@media(max-width:1250px) and (min-width:851px){.login-link{display:none}}
+@media(max-width:850px){.theme-picker button{min-height:32px;padding:8px}.theme-picker button span{display:none}}
+@media(max-width:640px){.nav-actions{gap:13px}.theme-picker{padding:3px}.theme-picker button{min-width:32px;min-height:32px}.theme-picker svg{width:15px;height:15px}.nav-wrap{gap:12px}.brand img{width:143px}}
+@media(prefers-reduced-motion:reduce){.theme-picker button{transition:none}}
