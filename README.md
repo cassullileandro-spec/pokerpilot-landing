@@ -36,7 +36,10 @@ npm run check
 - `landing/dist/light.html` e `dark.html`: abrem explicitamente cada tema.
 - `landing/dist/assets/`: logos, fontes e capturas Retina originais.
 - `landing/dist/config.js`: URLs da agenda e dos documentos legais.
+- `landing/dist/palette.css`: tokens e cores compartilhados dos temas Light e Dark.
 - `landing/server.mjs`: servidor de desenvolvimento local.
+
+As cores seguem os modos “Depois Light” e “Depois Dark” do [design system PokerPilot](https://www.figma.com/design/2p71bskRATG0xahYrqATNb?node-id=42-207), consultados em 25/10/2026. As capturas reais permanecem com a aparência da plataforma na data da captura; não são simulações do redesign.
 
 Para hospedar o site, publique o conteúdo de `landing/dist/` em um serviço de arquivos estáticos. Não é necessário executar o servidor de desenvolvimento em produção.
 

@@ -6,6 +6,5 @@
     try { const saved = localStorage.getItem('pokerpilot-theme'); if (saved === 'light' || saved === 'dark') theme = saved; } catch {}
   }
   document.documentElement.dataset.theme = theme;
-  document.getElementById('dark-theme').media = theme === 'dark' ? 'all' : 'not all';
-  document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#31363f' : '#f8fbf8';
+  document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#10161e' : '#f3f4f6';
 })();

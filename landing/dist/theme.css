@@ -3,8 +3,6 @@
 .theme-picker svg{width:13px;height:13px;stroke-width:1.7}
 .theme-picker button[aria-pressed=true]{background:var(--surface);color:var(--text);box-shadow:0 1px 5px #00000015}
 .theme-picker button:hover{color:var(--mint)}
-html[data-theme=dark] .theme-picker{background:#2c323c;border-color:#65708066}
-html[data-theme=dark] .theme-picker button[aria-pressed=true]{background:#495651;color:#bff5d1}
 .nav-actions{gap:17px}.desktop-nav{margin-left:0;gap:24px}
 @media(max-width:1250px) and (min-width:851px){.login-link{display:none}}
 @media(max-width:850px){.theme-picker button{min-height:32px;padding:8px}.theme-picker button span{display:none}}
