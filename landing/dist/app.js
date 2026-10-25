@@ -61,19 +61,19 @@
   });
 
   const captures = {
-    dashboard: { title: 'Dashboard', heading: 'Sua operação, em uma visão.', file: 'dashboard-light-retina.png', mobile: 'dashboard-mobile-retina.png', note: 'Conta de teste · indicadores sem histórico', alt: 'Dashboard real do PokerPilot: indicadores da conta de teste e tarefa em execução. A conta ainda não tem jogadores ou histórico financeiro.' },
-    tasks: { title: 'Tarefas', heading: 'O próximo passo tem lugar certo.', file: 'tasks-light-retina.png', note: 'Kanban real · tarefa demonstrativa em execução', alt: 'Kanban real da conta de teste, com a tarefa DEMO LP — Conferir fechamento mensal na coluna Executando.' },
-    deals: { title: 'Deals', heading: 'Acordos claros para os dois lados.', file: 'deals-light-retina.png', note: 'Acordo demonstrativo · divisão 50% / 50%', alt: 'Listagem real de deals com acordo demonstrativo ativo: 50% para o time e 50% para o jogador.' },
-    profit: { title: 'Lançamentos', heading: 'Da origem ao destino, tudo registrado.', file: 'profit-light-retina.png', note: 'Formulário real · operação não enviada', alt: 'Formulário real de novo lançamento Profit Chop com campos de origem, destinos, valor e data, sem operação enviada.' },
+    performance: { title: 'Desempenho', heading: 'Os resultados, por inteiro.', file: 'performance-20261025-light-retina.png', note: 'Indicadores e gráficos reais · role para explorar', alt: 'Tela real de Desempenho do PokerPilot com indicadores financeiros, resumo por jogador e gráficos do período.' },
+    dashboard: { title: 'Dashboard', heading: 'Sua operação, em uma visão.', file: 'dashboard-20261025-light-retina.png', mobile: 'dashboard-20261025-light-mobile-retina.png', note: 'Visão geral · conta atualizada em outubro de 2026', alt: 'Dashboard real do PokerPilot com jogadores ativos, Profit Chop, banca atual e lançamentos recentes.' },
+    bankroll: { title: 'Bankroll', heading: 'A banca, dia após dia.', file: 'bankroll-20261025-light-retina.png', note: 'Histórico diário · saldos por jogador e site', alt: 'Histórico real de bankroll diário do PokerPilot, organizado por data, jogador e site de poker.' },
+    transactions: { title: 'Lançamentos', heading: 'Da origem ao destino, tudo registrado.', file: 'transactions-20261025-light-retina.png', note: 'Lançamentos reais · valores, datas e fluxo', alt: 'Listagem real de lançamentos do PokerPilot com Profit Chop, retiradas, valores, jogadores e destinos.' },
   };
   const captureTabs = $$('.capture-tabs [data-capture]');
   const themeButtons = $$('[data-theme-choice]');
   function captureFile(capture, mobile = false) {
     const dark = document.documentElement.dataset.theme === 'dark';
-    if (mobile && capture.mobile) return dark ? 'dashboard-dark-mobile-retina.png' : capture.mobile;
-    return dark ? capture.file.replace('-light-', '-dark-') : capture.file;
+    const file = mobile && capture.mobile ? capture.mobile : capture.file;
+    return dark ? file.replace('-light-', '-dark-') : file;
   }
-  let activeCapture = 'dashboard';
+  let activeCapture = 'performance';
   function selectCapture(key) {
     const capture = captures[key];
     activeCapture = key;

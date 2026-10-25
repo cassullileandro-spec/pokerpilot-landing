@@ -46,14 +46,14 @@ Para hospedar o site, publique o conteúdo de `landing/dist/` em um serviço de 
 ## Funcionalidades
 
 - Seletor Dark/Light que sincroniza página, logotipo e capturas.
-- Galeria com Dashboard, Tarefas, Deals e Lançamentos; abas acessíveis por teclado e diálogo de ampliação.
-- PNGs desktop de 2880 × 1800 e dashboard mobile de 780 × 1688.
+- Galeria com Desempenho, Dashboard, Bankroll e Lançamentos; abas acessíveis por teclado e diálogo de ampliação.
+- Capturas reais atualizadas em 25/10/2026: PNGs desktop de 3360 × 2100, Desempenho completo de 3348 × 3824 e Dashboard mobile de 780 × 1688, em ambos os temas.
 - Bento com demonstração interativa de Kanban, navegação mobile, FAQ e respeito à preferência por movimento reduzido.
 
 ## Estado da prévia
 
 A página ainda é uma prévia: agenda, privacidade e termos precisam de URLs finais em `config.js`. Enquanto a agenda não estiver configurada, o formulário é demonstrativo, sem envio ou armazenamento dos dados.
 
-Os depoimentos são textos-modelo identificados; os alertas são um conceito em validação. As capturas mostram uma conta de teste sem histórico financeiro. Antes da publicação comercial, confirmar depoimentos, condições de cobrança e alegações do produto. A tag `noindex,nofollow` está mantida durante a revisão.
+Os depoimentos são textos-modelo identificados; os alertas são um conceito em validação. As capturas mostram os dados atualizados da conta de demonstração. Os valores exibidos não representam promessa de resultado. Antes da publicação comercial, confirmar depoimentos, condições de cobrança e alegações do produto. A tag `noindex,nofollow` está mantida durante a revisão.
 
-Pesquisas, notas internas, referências de design e imagens antigas não fazem parte deste repositório.
+Pesquisas, notas internas e referências de design não fazem parte deste repositório.

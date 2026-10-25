@@ -33,10 +33,8 @@ body{background:var(--bg)}
 .capture-tabs button[aria-selected=true]{background:#e1eddf;color:#1e5934;font-weight:600;box-shadow:inset 0 0 0 1px #aec8b24d}
 .capture-tabs button:hover{background:#eaf1e6;color:#1e5934}
 .capture-expand{font-size:11px;color:#385d43;padding:10px;border:1px solid #cbdcca;border-radius:7px;background:#fff;white-space:nowrap;display:flex;gap:16px;align-items:center}
-#capture-panel{height:545px;overflow:hidden;border-radius:10px;background:#32363f;position:relative;outline-offset:3px}
+#capture-panel{height:545px;overflow:auto;border-radius:10px;background:#32363f;position:relative;outline-offset:3px}
 #capture-picture{display:block}#capture-image{width:100%;height:auto;max-width:none;display:block}
-#capture-panel[data-capture=tasks] #capture-image{width:100%}
-#capture-panel[data-capture=profit] #capture-image{position:relative;top:0}
 .capture-description{display:flex;gap:16px;justify-content:space-between;align-items:center;padding:17px 12px 9px;font-size:10px;color:#6b7c6e}
 .capture-description-title{font-size:13px;font-weight:500;color:#31593d}
 .product-footnote{color:#687e6c;padding-top:24px}.product-footnote>span:first-child{color:#496b53}
@@ -82,13 +80,13 @@ dialog p,.review-dialog li{color:#647b65}.review-dialog strong{color:#2d5138}
 .capture-dialog .eyebrow{font-size:9px}.capture-dialog>p{font-size:12px;margin:0 0 18px}.capture-dialog-scroll{overflow:auto;max-height:65dvh;border-radius:10px;background:#32363f}.capture-dialog-scroll img{width:100%;max-width:none;min-width:900px;height:auto}.capture-dialog .zoom-hint{display:none;font-size:11px;margin:12px 0 0}
 @media(min-width:1500px){.hero{padding-top:76px}.hero h1{font-size:86px}}
 @media(max-width:1150px){.hero h1{font-size:72px;letter-spacing:-3.6px}#capture-panel{height:460px}.capture-tabs button{padding-inline:14px}.bento-copy{padding-inline:28px}.real-card-visual{padding-inline:22px;height:275px}.task-shot .shot-crop{width:305px}}
-@media(max-width:850px){.hero h1{font-size:62px;letter-spacing:-3px}#capture-panel{height:370px}#capture-panel[data-capture=profit] #capture-image{top:0}.capture-tabs button{font-size:10px;padding:10px 12px}.capture-description{align-items:start}.capture-description-title{font-size:11px}.capture-description>span:last-child{font-size:9px;text-align:right;max-width:180px}.real-card-visual{height:245px;padding-inline:16px}.task-shot .shot-crop{width:280px}.bento-copy{padding:24px}.capture-dialog-scroll img{min-width:900px}}
+@media(max-width:850px){.hero h1{font-size:62px;letter-spacing:-3px}#capture-panel{height:370px}.capture-tabs button{font-size:10px;padding:10px 12px}.capture-description{align-items:start}.capture-description-title{font-size:11px}.capture-description>span:last-child{font-size:9px;text-align:right;max-width:180px}.real-card-visual{height:245px;padding-inline:16px}.task-shot .shot-crop{width:280px}.bento-copy{padding:24px}.capture-dialog-scroll img{min-width:900px}}
 @media(max-width:640px){
  .menu-toggle span{background:#3a6144}.mobile-nav:not([hidden]){background:#fbfdf8;border-color:#d7e6d0;box-shadow:0 15px 40px #203b251a}.mobile-nav>a{color:#41644a;border-color:#e1eadb}
  .hero{padding-top:38px}.hero h1{font-size:clamp(38px,10.2vw,62px);letter-spacing:-2px;line-height:1.1}.hero-description{font-size:14px}.hero-actions{gap:20px}.product-stage{margin-top:39px}
  .stage-caption{font-size:7px;letter-spacing:.7px;margin-inline:3px}.stage-caption .real-label{font-size:8px;letter-spacing:0}.capture-shell{border-radius:13px;padding:5px;box-shadow:0 20px 45px -20px #235e3e40,0 0 0 4px #ffffff65}
  .capture-toolbar{padding:3px 1px 8px;gap:5px;min-height:43px}.capture-tabs{gap:0;flex:1;justify-content:space-between}.capture-tabs button{font-size:9px;padding:10px 7px;min-height:35px}.capture-expand{font-size:0;padding:9px 7px;gap:0;min-width:29px;min-height:35px}.capture-expand span{font-size:14px}
- #capture-panel{height:414px;border-radius:8px;overflow:auto}#capture-image{width:100%}#capture-panel[data-capture=tasks] #capture-image,#capture-panel[data-capture=deals] #capture-image,#capture-panel[data-capture=profit] #capture-image{width:780px;max-width:none;position:static}
+ #capture-panel{height:414px;border-radius:8px;overflow:auto}#capture-image{width:100%}#capture-panel:not([data-capture=dashboard]) #capture-image{width:780px;max-width:none;position:static}
  .capture-description{display:block;padding:12px 8px 7px}.capture-description-title{font-size:12px;display:block}.capture-description>span:last-child{font-size:9px;display:block;max-width:none;text-align:left;margin-top:3px}
  .product-footnote{padding-top:17px}.problem{padding-top:80px}.bento-copy{padding:23px 25px 29px}.real-card-visual{height:265px;padding:24px 22px 45px}.task-shot .shot-crop{width:285px}.deal-shot .shot-crop{width:100%}.performance-shot .shot-crop{min-width:500px;width:500px;transform:rotate(3deg) translateX(87px)}.profit-shot .shot-crop{min-width:540px;width:540px;transform:translateX(102px)}
  .shot-open{font-size:10px;right:19px;bottom:10px}.visual-disclaimer{font-size:9px}.footer-top>div:last-child{border-color:#dce6d6}
@@ -125,4 +123,4 @@ dialog p,.review-dialog li{color:#647b65}.review-dialog strong{color:#2d5138}
 @media(max-width:850px){.card-visual{height:260px}.task-visual{padding:27px 15px 0}.mini-window{padding:14px}.mini-window-bar{font-size:10px}.moving-task strong{font-size:9px}.moving-task{padding:10px}.notes-visual{padding:32px 20px}.note-sheet{padding:18px}.note-heading{font-size:9px}.note-heading small{font-size:7px}.note-sheet strong{font-size:12px}.report-visual{padding-inline:30px}.bar-chart{height:130px}}
 @media(max-width:640px){.card-visual{height:265px}.task-visual{padding:25px 20px 0}.mini-window{padding:14px}.kanban-mini{gap:12px}.mini-window-bar{font-size:11px}.moving-task strong{font-size:10px}.notes-visual{padding:32px}.note-heading{font-size:10px}.report-visual{padding:34px 36px 20px}.bar-chart{height:140px}.bento-copy{padding-top:9px}}
 
-@media(min-width:641px){#capture-panel[data-capture=tasks],#capture-panel[data-capture=deals],#capture-panel[data-capture=profit]{height:auto;aspect-ratio:1.6}#capture-panel[data-capture=deals],#capture-panel[data-capture=profit]{aspect-ratio:1.6}}
+@media(min-width:641px){#capture-panel[data-capture=bankroll],#capture-panel[data-capture=transactions]{height:auto;aspect-ratio:1.6}}
