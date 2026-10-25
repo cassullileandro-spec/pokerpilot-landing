@@ -118,10 +118,10 @@
 
   function applyTheme(theme, remember = false) {
     document.documentElement.dataset.theme = theme;
-    $('#dark-theme').media = theme === 'dark' ? 'all' : 'not all';
-    $('meta[name="theme-color"]').content = theme === 'dark' ? '#31363f' : '#f8fbf8';
+    $('meta[name="theme-color"]').content = theme === 'dark' ? '#10161e' : '#f3f4f6';
     themeButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme)));
-    $$('.brand img, .footer-brand img').forEach(img => { img.src = theme === 'dark' ? './assets/logo.svg' : './assets/logo-light.svg'; });
+    $$('.brand img, .footer-brand img').forEach(img => { img.src = theme === 'dark' ? './assets/logo.svg?v=20261025' : './assets/logo-light.svg?v=20261025'; });
+    $$('[data-brand-symbol]').forEach(img => { img.src = `./assets/symbol-${theme}.svg`; });
     $('#theme-label').textContent = theme === 'dark' ? 'Dark mode' : 'Light mode';
     $('.version-link').href = theme === 'dark' ? './light.html' : './dark.html';
     $('.version-link').textContent = theme === 'dark' ? 'Abrir versão clara ↗' : 'Abrir versão escura ↗';
