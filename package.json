@@ -5,6 +5,6 @@
   "scripts": {
     "dev": "node landing/server.mjs",
     "start": "node landing/server.mjs",
-    "check": "node --check landing/dist/app.js && node --check landing/dist/theme-init.js && node --check landing/server.mjs"
+    "check": "node --check landing/dist/app.js && node --check landing/dist/theme-init.js && node --check landing/server.mjs && node --check landing/dist/pricing.js && node landing/pricing.test.cjs"
   }
 }

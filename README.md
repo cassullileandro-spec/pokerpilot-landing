@@ -46,6 +46,8 @@ Para hospedar o site, publique o conteúdo de `landing/dist/` em um serviço de 
 ## Funcionalidades
 
 - Seletor Dark/Light que sincroniza página, logotipo e capturas.
+- Calculadora mensal em USD por jogadores ativos, com faixas atualizadas em 30/10/2026. A tarifa da faixa vale para todo o time; 301+ jogadores são sob consulta.
+- Campo numérico, slider, destaque da faixa e validação de entradas; testes dos limites das faixas incluídos em `npm run check`.
 - Galeria com Desempenho, Dashboard, Bankroll e Lançamentos; abas acessíveis por teclado e diálogo de ampliação.
 - Capturas reais atualizadas em 25/10/2026: PNGs desktop de 3360 × 2100, Desempenho completo de 3348 × 3824 e Dashboard mobile de 780 × 1688, em ambos os temas.
 - Bento com demonstração interativa de Kanban, navegação mobile, FAQ e respeito à preferência por movimento reduzido.
