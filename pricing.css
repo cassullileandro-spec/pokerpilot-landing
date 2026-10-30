@@ -18,6 +18,9 @@
 .price-table th:first-child, .price-table td:first-child { padding-left: 20px; }
 .price-table th:last-child, .price-table td:last-child { padding-right: 20px; }
 .price-table tr.selected-tier td { color: var(--text); background: var(--pp-color-selection); border-bottom-color: transparent; }
+.price-table tr:has(+ tr.selected-tier) td,
+.price-table:has(tbody > tr:first-child.selected-tier) thead th { border-bottom-color: transparent; }
+.price-table:has(tbody > tr:last-child.selected-tier) + .table-footnote { border-top-color: transparent; }
 .price-table tr.selected-tier td:first-child { border-radius: 10px 0 0 10px; }
 .price-table tr.selected-tier td:last-child { border-radius: 0 10px 10px 0; }
 .price-table tr.selected-tier strong { color: var(--brand); }
