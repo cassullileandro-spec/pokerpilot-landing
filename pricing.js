@@ -1,11 +1,15 @@
 function calculatePricing(players) {
   if (!Number.isSafeInteger(players) || players < 1 || players > 100000) return null;
-  const tiers = [[10, 1069], [30, 589], [100, 389], [200, 289], [300, 249]];
+  const tiers = [[4, 0], [15, 350], [60, 275], [150, 235], [300, 215]];
   const tier = tiers.findIndex(([limit]) => players <= limit);
-  if (tier === -1) return { players, tier: 5, rateCents: null, totalCents: null };
-  const rateCents = tiers[tier][1];
-  // Volume pricing: the selected rate applies to every active player, not marginal bands.
-  return { players, tier, rateCents, totalCents: players * rateCents };
+  if (tier === -1) return { players, tier: 5, totalCents: null };
+  let totalCents = 2500;
+  // The base includes four players; only additional seats accumulate by band.
+  for (let index = 1; index <= tier; index++) {
+    const [limit, rateCents] = tiers[index];
+    totalCents += (Math.min(players, limit) - tiers[index - 1][0]) * rateCents;
+  }
+  return { players, tier, totalCents };
 }
 
 if (typeof module !== 'undefined' && module.exports) {
@@ -40,7 +44,7 @@ if (typeof module !== 'undefined' && module.exports) {
       period.hidden = consultation;
       rate.textContent = consultation
         ? 'Para times com 301 ou mais jogadores, fale com nossa equipe.'
-        : `${result.players} ${result.players === 1 ? 'jogador' : 'jogadores'} × ${money(result.rateCents)} por mês`;
+        : `Para um time de ${result.players} ${result.players === 1 ? 'jogador ativo' : 'jogadores ativos'}.`;
     }
     number.disabled = false;
     slider.disabled = false;
